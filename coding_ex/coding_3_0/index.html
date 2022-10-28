@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>토글 sns 버튼</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<style>
+		body {
+			margin: 0;
+			background: teal;
+		}
+
+		.container {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.sns-inner {
+			position: relative;
+		}
+
+		.trigger {
+			background-color: #fff;
+			color: #666;
+			width: 50px;
+			height: 50px;
+			font-size: 35px;
+			text-align: center;
+			line-height: 50px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		.sns-items {
+			width: 50px;
+			position: absolute;
+			left: 0;
+			top: 65px;
+			background: dodgerblue;
+			border-radius: 5px;
+			display: none;
+		}
+
+		.sns-items a {
+			display: block;
+			text-align: center;
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			font-size: 20px;
+		}
+
+		.sns-items a .fa {
+			transition: 0.5s;
+		}
+
+		.sns-items a:hover .fa {
+			transform: rotateY(720deg);
+			color: #003c3c;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="sns-inner">
+			<i class="trigger fa fa-user"></i>
+			<div class="sns-items">
+				<a href=""><i class="fa fa-facebook"></i></a>
+				<a href=""><i class="fa fa-twitter"></i></a>
+				<a href=""><i class="fa fa-instagram"></i></a>
+				<a href=""><i class="fa fa-youtube-play"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$('.trigger').click(function() {
+			$('.sns-items').fadeToggle('fast');
+		})
+	</script>
+
+</body>
+
+</html>

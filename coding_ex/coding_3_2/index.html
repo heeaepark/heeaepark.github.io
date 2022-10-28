@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>sns 아이콘 애니메이션</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .sns {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #eee;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .sns a {
+      color: #000;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 24px;
+      background: #fff;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin: 0 5px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .sns a::before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 0;
+      left: 0;
+      bottom: 0;
+      transition: 0.5s;
+      z-index: -1;
+      
+    }
+    .sns a:hover::before {
+      height: 100%;
+    }
+    .fa {
+      transition: 0.5s;
+
+    }
+    .sns a:hover .fa {
+      transform: rotateY(360deg);
+      color: #fff;
+    }
+    .sns a:nth-child(1)::before {
+      background: #3b5999;
+    }
+    .sns a:nth-child(2)::before {
+      background: #55acee;
+    }
+    .sns a:nth-child(3)::before {
+      background: #dd4b39;
+    }
+    .sns a:nth-child(4)::before {
+      background: #0077B5;
+    }
+    .sns a:nth-child(5)::before {
+      background: #e4405f;
+    }
+  </style>
+</head>
+<body>
+  <div class="sns">
+    <a href=""><i class="fa fa-facebook"></i></a>
+    <a href=""><i class="fa fa-twitter"></i></a>
+    <a href=""><i class="fa fa-google-plus"></i></a>
+    <a href=""><i class="fa fa-linkedin"></i></a>
+    <a href=""><i class="fa fa-instagram"></i></a>
+  </div>
+</body>
+</html>

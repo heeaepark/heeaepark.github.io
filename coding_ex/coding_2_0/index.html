@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>호버 프로덕트 썸네일</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<style>
+		body {
+			margin: 0;
+			background: #fbfbfb;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.product {
+			position: absolute;
+			width: 350px;
+			height: 450px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.61);
+			text-align: center;
+			background: #fff;
+			border-radius: 5px;
+			overflow: hidden;
+		}
+
+		.product img {
+			height: 100%;
+		}
+
+		.detail {
+			padding: 10px;
+			background: #f6f6f6;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			bottom: -198px;
+			transition: 0.5s;
+		}
+
+		.product:hover .detail {
+			bottom: 0;
+		}
+
+		.detail-head {
+			overflow: hidden;
+			height: 50px;
+			border-bottom: 1px solid lightgray;
+		}
+
+		.head-text {
+			float: left;
+			margin: 0;
+			text-align: left;
+			height: 100%;
+		}
+
+		.head-text big {
+			display: block;
+			font-weight: bold;
+		}
+
+		.head-text small {
+			color: #666;
+		}
+
+		.price {
+			float: right;
+			color: #d20000;
+			font-size: 20px;
+			font-weight: bold;
+			display: inline-block;
+			height: 100%;
+			line-height: 50px;
+		}
+
+		.detail-option {
+			text-align: left;
+			font-size: 14px;
+			color: #4e4e4e;
+		}
+
+		.detail-option div {
+			padding-left: 10px;
+		}
+
+		.detail-option h4 {
+			margin-bottom: 5px;
+		}
+
+		.detail-option div span {
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			text-align: center;
+			margin-right: 10px;
+			color: #4e4e4e;
+			border-radius: 3px;
+			line-height: 25px;
+			cursor: pointer;
+		}
+
+		.size span.active {
+			background: #000;
+			color: #fff;
+		}
+
+		.detail-option div span:last-child {
+			margin-right: 0;
+		}
+
+		.colors span:nth-child(1) {
+			background: olive;
+		}
+
+		.colors span:nth-child(2) {
+			background: pink;
+		}
+
+		.colors span:nth-child(3) {
+			background: #b4d8ff;
+		}
+
+		.colors span:nth-child(4) {
+			background: #000;
+		}
+
+		.colors span:nth-child(5) {
+			background: #d20000;
+		}
+
+		.colors span.active {
+			border-radius: 50%;
+		}
+
+		.detail label {
+			position: absolute;
+			right: 20px;
+			bottom: 60px;
+			color: #666;
+			font-size: 20px;
+		}
+
+		.detail label input[type="checkbox"] {
+			display: none;
+		}
+
+		.detail label input[type="checkbox"]:checked~.fa {
+			color: red;
+		}
+
+		.detail button {
+			width: 100%;
+			height: 30px;
+			color: #fff;
+			background: #000;
+			border: none;
+			outline: none;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="product">
+		<img src="images/product01.png">
+		<div class="detail">
+			<div class="detail-head">
+				<p class="head-text">
+					<big>DREES</big>
+					<small>tweed-spanggle-dress</small>
+				</p>
+				<span class="price">$ 55.99</span>
+			</div>
+			<div class="detail-option">
+				<h4>SIZE</h4>
+				<div class="size">
+					<span>XS</span>
+					<span>S</span>
+					<span>M</span>
+					<span>L</span>
+					<span>XL</span>
+				</div>
+				<h4>COLOR</h4>
+				<div class="colors">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<label>
+					<input type="checkbox">
+					<i class="fa fa-heart"></i>
+				</label>
+			</div>
+			<button>Add to Cart</button>
+		</div>
+	</div>
+	<script>
+		$('.size span').click(function() {
+			$(this).addClass('active');
+			$(this).siblings().removeClass('active')
+		});
+		$('.colors span').click(function() {
+			$(this).addClass('active');
+			$(this).siblings().removeClass('active')
+		});
+	</script>
+</body>
+
+</html>

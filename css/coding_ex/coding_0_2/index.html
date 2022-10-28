@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>모바일 홈 스크린</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="moblie-mokup.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+ 
+  <!-- moblile mokup start  -->
+  <div class="mokup-iphone">
+    <div class="mobile-mokup">
+      <div class="mokup-camera">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="mokup-volume">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="mokup-power">
+        <span></span>
+      </div>
+      <div class="mokup-homebtn">
+        <span></span>
+      </div>
+      <div class="mokup-inner">
+        <!-- mokup content -->
+        <div class="mokup-content">
+          <div class="overlay-screen">
+          </div>
+          <div class="home-screen">
+            <div class="clock">
+              <h1>08:04 <span>.pm</span></h1>
+              <p>10월 18일 금요일</p>
+              <p>100% <span><i class="fa fa-battery-full"></i></span></p>
+            </div>
+            <div class="finger">
+              <img src="images/finger-print.png">
+              <i>지문 인식으로 잠금을 해제하세요.</i>
+            </div>
+              <div class="footer-btn">
+                <i class="fa fa-phone-square"></i>
+                <i class="fa fa-camera"></i>
+              </div>
+          </div>
+        </div>
+        <!-- mokup content -->
+      </div>
+    </div>
+  </div>
+  <!-- moblile mokup end  -->
+  <script>
+    $('.mokup-homebtn').click(function(){
+      $('.overlay-screen').toggleClass('active');
+      $('.clock').toggleClass('active');
+    });
+  </script>
+</body>
+</html>

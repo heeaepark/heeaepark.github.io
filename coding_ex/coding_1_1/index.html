@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>5가지 호버 이펙트</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+		body {
+			font-family: 'Oswald', sans-serif;
+		}
+
+		.container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		a.btn1,
+		a.btn2,
+		a.btn3,
+		a.btn4,
+		a.btn5 {
+			text-decoration: none;
+			color: #000;
+			font-size: 40px;
+			position: relative;
+			padding-bottom: 10px;
+			display: block;
+			margin-bottom: 40px;
+		}
+
+		/* a.btn1 */
+		a.btn1:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: crimson;
+			height: 4px;
+			width: 0;
+			border-radius: 2px;
+			transition: 0.5s ease;
+		}
+
+		a.btn1:hover:before {
+			width: 100%;
+		}
+
+		/* a.btn2 */
+		a.btn2:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background-color: crimson;
+			height: 4px;
+			width: 0;
+			border-radius: 2px;
+			transition: 0.5s ease;
+		}
+
+		a.btn2:hover:before {
+			width: 100%;
+		}
+
+		/* a.btn3 */
+		a.btn3:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 2px;
+			background-color: crimson;
+			height: 10px;
+			width: 10px;
+			border-radius: 2px;
+			transition: 0.5s ease;
+		}
+
+		a.btn3:hover:before {
+			left: 100%;
+		}
+
+		/* a.btn4 */
+		a.btn4:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			background-color: crimson;
+			height: 4px;
+			width: 0;
+			border-radius: 2px;
+			transform: translateX(-50%);
+			transition: 0.5s ease;
+		}
+
+		a.btn4:hover:before {
+			width: 100%;
+		}
+
+		/* a.btn5 */
+		a.btn5:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			background-color: crimson;
+			height: 4px;
+			width: 100%;
+			border-radius: 2px;
+			transform: translateX(-50%);
+			transition: 0.5s ease;
+		}
+
+		a.btn5:hover:before {
+			width: 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<a class="btn1" href="">Button Hover Effect #01</a>
+		<a class="btn2" href="">Button Hover Effect #02</a>
+		<a class="btn3" href="">Button Hover Effect #03</a>
+		<a class="btn4" href="">Button Hover Effect #04</a>
+		<a class="btn5" href="">Button Hover Effect #05</a>
+	</div>
+
+</body>
+
+</html>
