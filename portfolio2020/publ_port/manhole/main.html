@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <title>MANHOLE MAIN PAGE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="inner clearfix">
+        <div class="header-inner">
+          <a href="#none" class="menu"><i class="fa fa-bars"></i></a>
+          <a href="main.html" class="logo"><img src="images/logo.png"></a>
+          <a href="#" class="search"><i class="fa fa-search"></i></a>
+        </div>
+      </div>
+    </header>
+    <div class="main-content">
+      <section class="live-slider">
+        <div class="inner">
+          <h1>실시간 인기 버스킹</h1>
+          <div class="my-silder">
+            <div uk-slider="center: true; autoplay: true; autoplay-interval: 3000;">
+
+              <ul class="uk-slider-items">
+                <li class="uk-width-3-4">
+                  <a href="#none" class="live-btn"><i class="fa fa-play-circle"></i></a>
+                </li>
+                <li class="uk-width-3-4">
+                  <a href="#none" class="live-btn"><i class="fa fa-play-circle"></i></a>
+                </li>
+                <li class="uk-width-3-4">
+                  <a href="#none" class="live-btn"><i class="fa fa-play-circle"></i></a>
+                </li>
+                <li class="uk-width-3-4">
+                  <a href="#none" class="live-btn"><i class="fa fa-play-circle"></i></a>
+                </li>
+                <li class="uk-width-3-4">
+                  <a href="#none" class="live-btn"><i class="fa fa-play-circle"></i></a>
+                </li>
+                <li class="uk-width-3-4">
+                  <a href="#none" class="live-btn"><i class="fa fa-play-circle"></i></a>
+                </li>
+              </ul>
+
+              <ul class="uk-slider-nav uk-dotnav"></ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="how-busker">
+        <h1>이 버스커 어때요?</h1>
+        <div class="about-busker">
+          <article>
+            <img src="images/how-about-busker.png">
+          </article>
+          <article>
+            <p>아티스트: 에릭남(Eric Nam)</p>
+            <p>장르: 발라드</p>
+            <p>좋아요: 4,300<i class="fa fa-heart"></i></p>
+            <p>버스킹 일정: 2019.11.14 ~ 16</p>
+            <p>신촌 사거리</p>
+            <a href="#none" class="about-busker-open">더보기</a>
+          </article>
+        </div>
+      </section>
+      <section class="chart">
+        <div class="inner">
+          <h1>아티스트 순위</h1>
+          <article class="cart-list">
+            <p>
+              <span>2019.11.05 / 9:00 기준</span>
+              <a href="#none">더보기 ></a>
+            </p>
+            <div class="chart-item">
+              <a href="#none">
+                <img src="images/chart01.png">
+                <article>
+                  <span>1.</span>
+                  <span>
+                    <small>불티(SPARCLE)</small>
+                    <small>태연</small>
+                  </span>
+                  <a href="#none" class="chart-paly"><i class="fa fa-play-circle-o"></i></a>
+                </article>
+              </a>
+            </div>
+            <div class="chart-item">
+              <a href="#none">
+                <img src="images/chart02.png">
+                <article>
+                  <span>2.</span>
+                  <span>
+                    <small>MAPS - cover</small>
+                    <small>Maroon 5</small>
+                  </span>
+                  <a href="#none" class="chart-paly"><i class="fa fa-play-circle-o"></i></a>
+                </article>
+              </a>
+            </div>
+            <div class="chart-item">
+              <a href="#none">
+                <img src="images/chart03.png">
+                <article>
+                  <span>3.</span>
+                  <span>
+                    <small>Bad people</small>
+                    <small>Billie alilish</small>
+                  </span>
+                  <a href="#none" class="chart-paly"><i class="fa fa-play-circle-o"></i></a>
+                </article>
+              </a>
+            </div>
+            <div class="chart-item">
+              <a href="#none">
+                <img src="images/chart04.png">
+                <article>
+                  <span>4.</span>
+                  <span>
+                    <small>Honesty</small>
+                    <small>에릭남(Eric Nam)</small>
+                  </span>
+                  <a href="#none" class="chart-paly"><i class="fa fa-play-circle-o"></i></a>
+                </article>
+              </a>
+            </div>
+            <div class="chart-item">
+              <a href="#none">
+                <img src="images/chart05.png">
+                <article>
+                  <span>5.</span>
+                  <span>
+                    <small>항해</small>
+                    <small>악뮤(AKMU)</small>
+                  </span>
+                  <a href="#none" class="chart-paly"><i class="fa fa-play-circle-o"></i></a>
+                </article>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="category">
+        <div class="inner">
+          <h1>아티스트 장르</h1>
+          <div class="category-slider">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true">
+
+              <div class="uk-slider-container">
+                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m">
+                  <li><a href="#none"># 인디</a></li>
+                  <li><a href="#none"># 발라드</a></li>
+                  <li><a href="#none"># COVER</a></li>
+                  <li><a href="#none"># POP</a></li>
+                  <li><a href="#none"># 아이돌</a></li>
+                  <li><a href="#none"># 댄스</a></li>
+                  <li><a href="#none"># 일렉</a></li>
+                  <li><a href="#none"># 재즈</a></li>
+                  <li><a href="#none"># 클래식</a></li>
+                  <li><a href="#none"># 뮤지컬</a></li>
+                  <li><a href="#none"># CCM</a></li>
+                  <li><a href="#none"># 힙합</a></li>
+                </ul>
+              </div>
+              <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+              <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="event-banner">
+        <p>
+          당신의 음악을<br> 들려주세요 !
+          <a href="#none">버스킹 신청</a>
+        </p>
+      </div>
+      <footer>
+        copyright 2019-11-06 Manhole mobile first design
+      </footer>
+      <div class="side-bar">
+        <a href="#" class="side-bar-close">
+          <span></span>
+        </a>
+        <div class="my-info">
+          <i class="fa fa-user-circle-o"></i>
+          <span>사용자명</span>
+        </div>
+          <a href="#none" class="my-page">마이페이지 바로가기</a>
+          <ul>
+            <b>실시간 버스킹</b>
+            <li><a href="#none">인기 버스킹</a></li>
+            <li><a href="#none">장르별 버스킹</a></li>
+            <li><a href="#none">지역별 버스킹</a></li>
+          </ul>
+          <ul>
+            <b>My</b>
+            <li><a href="#none">선호 아티스트</a></li>
+            <li><a href="#none">최근 시청내역</a></li>
+            <li><a href="#none">FOR U</a></li>
+            <li><a href="#none">선호 장르</a></li>
+          </ul>
+          <ul>
+            <b>이벤트 / 혜택</b>
+            <li><a href="#none">이벤트</a></li>
+            <li><a href="#none">등급 혜택</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="about-busker-modal">
+      <div class="inner">
+        <section>
+          <a href="#none" class="about-busker-close">닫기</a>
+          <div>
+            <iframe width="100%" height="350px" src="https://www.youtube.com/embed/JchrAc3ebuM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="busking-info">
+            <input type="radio" name="tab" id="tab01" checked>
+            <input type="radio" name="tab" id="tab02">
+            <input type="radio" name="tab" id="tab03">
+
+            <div class="tab-btn">
+              <label for="tab01">버스킹 정보</label>
+              <label for="tab02">버스킹 일정</label>
+              <label for="tab03">코멘트</label>
+            </div>
+
+            <div class="info-area">
+              <div class="info">
+                <p>아티스트: 에릭남(Eric Nam)</p>
+                <p>곡명: 2002 - cover</p>
+                <p>편곡: 지민</p>
+                <p>원곡: 앤 마리 (Ane marie)</p>
+                <p>장르: POP</p>
+                <span>
+                  실시간 버스킹 장소: <a href="#none">강남 10번 출구, 카페 ROEM</a>
+                </span>
+              </div>
+              <div class="calendar">
+                <div class="month-header">
+                  <span class="prev"><i class="fa fa-angle-double-left"></i></span>
+                  <span class="month">11월 2019</span>
+                  <span class="next"><i class="fa fa-angle-double-right"></i></span>
+                </div>
+                <div class="day-body day-width">
+                  <div class="date">
+                    <span>월</span>
+                    <span>화</span>
+                    <span>수</span>
+                    <span>목</span>
+                    <span>금</span>
+                    <span>토</span>
+                    <span>일</span>
+                  </div>
+                  <div class="days day-width">
+                    <div class="week">
+                      <span><b></b></span>
+                      <span><b></b></span>
+                      <span><b></b></span>
+                      <span><b></b></span>
+                      <span><b>1</b></span>
+                      <span><b>2</b></span>
+                      <span><b>3</b></span>
+                    </div>
+                    <div class="week">
+                      <span><b>4</b></span>
+                      <span><b class="today">5</b></span>
+                      <span><b>6</b></span>
+                      <span><b>7</b></span>
+                      <span><b>8</b></span>
+                      <span><b>9</b></span>
+                      <span><b>10</b></span>
+                    </div>
+                    <div class="week">
+                      <span><b>11</b></span>
+                      <span><b>12</b></span>
+                      <span><b>13</b></span>
+                      <span><b class="scadule scadule-open">14</b></span>
+                      <span><b class="scadule">15</b></span>
+                      <span><b class="scadule">16</b></span>
+                      <span><b>17</b></span>
+                    </div>
+                    <div class="week">
+                      <span><b>18</b></span>
+                      <span><b>19</b></span>
+                      <span><b>20</b></span>
+                      <span><b>21</b></span>
+                      <span><b>22</b></span>
+                      <span><b>23</b></span>
+                      <span><b>24</b></span>
+                    </div>
+                    <div class="week">
+                      <span><b>25</b></span>
+                      <span><b>26</b></span>
+                      <span><b>27</b></span>
+                      <span><b>28</b></span>
+                      <span><b>29</b></span>
+                      <span><b>30</b></span>
+                      <span><b></b></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="scadule-info">
+                  <p>2019.11.14 ~ 2019.11.16</p>
+                  <p>시간: 20:00시 ~ 21:00시</p>
+                  <p>장소: 신촌 사거리</p>
+                  <a href="#none" class="book-mark">
+                    <i class="fa fa-bookmark"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="comment">
+                <h1><i class="fa fa-lightbulb-o"></i>
+                  저희 버스킹 보러 많이들 와 주세요! <i class="fa fa-smile-o"></i></h1>
+                <span>
+                  <input type="text" placeholder="아티스트에게 응원의 메세지를 남겨주세요!">
+                  <button>남기기</button>
+                </span>
+                <p>꼭 공연 보러 갈게요!</p>
+                <p>12월 공연 일정은 아직 업로드 안되었나요?</p>
+                <p>언제나 응원합니다 :)</p>
+                <p>화이팅</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('.about-busker-open').click(function() {
+      $('body').addClass('active');
+      $('.container').addClass('active');
+      $('.about-busker-modal').addClass('active');
+    });
+    $('.about-busker-close').click(function() {
+      $('body').removeClass('active');
+      $('.container').removeClass('active');
+      $('.about-busker-modal').removeClass('active');
+    });
+    $('.scadule-open').click(function() {
+      $('.scadule-info').toggleClass('active');
+    });
+    $('.menu').click(function() {
+      $('body').addClass('active');
+      $('.container').addClass('active');
+      $('.side-bar').addClass('active');
+    });
+    $('.side-bar-close').click(function() {
+      $('body').removeClass('active');
+      $('.container').removeClass('active');
+      $('.side-bar').removeClass('active');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>보더래디어스 애니메이션</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+    }
+    .square {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 400px;
+      height: 400px;
+      text-align: center;
+    }
+    .square span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 2px solid #fff;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+    }
+    .square:hover span {
+      background: crimson;
+      border: none;
+    }
+    .square span:nth-child(1) {
+      border-radius: 40% 45% 45% 45% / 60% 60% 60% 60%;
+      animation: animate 5s linear infinite;
+    }
+    .square span:nth-child(2) {
+      border-radius: 50% 55% 55% 50% / 50% 50% 50% 50%;
+      animation: animate 4s linear infinite;
+    }
+    .square span:nth-child(3) {
+      border-radius: 80% 85% 85% 80% / 55% 55% 55% 55%;
+      animation: animate1 5s linear infinite;
+    }
+    .square:hover span:nth-child(1) {
+      opacity: 0.8;
+    }
+    .square:hover span:nth-child(2) {
+      opacity: 0.6;
+    }
+    .square:hover span:nth-child(3) {
+      opacity: 0.4;
+    }
+     .content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+    .content a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      border: 2px solid #fff;
+      width: 60%;
+      margin: auto;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 50% 70% 70% 40% / 70% 80% 80% 80%
+    }
+    @keyframes animate {
+      0%{
+        transform: rotate(0);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes animate1 {
+      0%{
+        transform: rotate(0);
+      }
+      100%{
+        transform: rotate(-360deg);
+      }
+      
+  </style>
+</head>
+<body>
+  <div class="square">
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="content">
+      <h2>heading text</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dignissimos ad molestiae culpa ut optio omnis, dolorem. Excepturi accusamus amet harum nulla aut recusandae, vitae enim, quidem, libero id impedit.
+      </p>
+      <a href="#none">Read More</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>NAITE 커뮤니티 페이지</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery-1.8.1.min.js"></script>
+  <script src="js/custom.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header">
+      <!--     header-include-->
+    </div>
+    <div id="bottom-navigation">
+      <!--      bottom-navigation-->
+    </div>
+    <section class="bedroom">
+      <h1 class="section-heading">침실</h1>
+      <div class="inner">
+        <div>
+          <div class="bedroom-filter" uk-filter="target: .js-filter">
+
+            <!-- Filter controls -->
+            <ul class="filter-name">
+              <li uk-filter-control><a href="#">ALL</a></li>
+              <li uk-filter-control="[data-category='침대']"><a href="#">침대프레임</a></li>
+              <li uk-filter-control="[data-category='화장대']"><a href="#">화장대</a></li>
+              <li uk-filter-control="[data-category='전신거울']"><a href="#">전신거울</a></li>
+              <li uk-filter-control="[data-category='스툴']"><a href="#">스툴</a></li>
+              <li uk-filter-control="[data-category='서랍장']"><a href="#">서랍장</a></li>
+            </ul>
+            <div class="sub-filter clearfix">
+              <article class="sub-filter-name">
+                <a href="#none">NEW</a>
+                <a href="#none">BEST</a>
+                <a href="#none">HIGH PRICE</a>
+                <a href="#none">LOW PRICE</a>
+              </article>
+              <article class="filter-list-layout">
+                <a class="layout-2colum" href="#none">
+                  <img src="images/icon-4rect.png" alt="2배열">
+                </a>
+                <a class="layout-3colum" href="#none">
+                  <img src="images/icon-6rect.png" alt="2배열">
+                </a>
+              </article>
+            </div>
+            <!-- Layout items -->
+            <ul class="js-filter filter-list">
+              <li data-category="침대">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list01.png" alt="신상품1">
+                    <b>라자르 침대</b>
+                    <p>
+                      자꾸만 눕고 싶어지는 마약침대
+                    </p>
+                    <big>830,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="화장대">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list02.png" alt="신상품1">
+                    <b>유러피언 화장대</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>385,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="스툴">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list03.png" alt="신상품1">
+                    <b>플로리안 스툴</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>185,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="화장대">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list04.png" alt="신상품1">
+                    <b>우디크 화장대</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>485,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="스툴">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list05.png" alt="신상품1">
+                    <b>가드너 스툴</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>63,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="화장대">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list06.png" alt="신상품1">
+                    <b>라이트우드 화장대</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>496,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="침대">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list07.png" alt="신상품1">
+                    <b>모던 스퀘어 침대</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>962,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="전신거울">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list08.png" alt="신상품1">
+                    <b>유러피안 전신거울</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>72,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="전신거울">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list09.png" alt="신상품1">
+                    <b>우디크 전신거울</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>120,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="서랍장">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list10.png" alt="신상품1">
+                    <b>딥다크 서랍장</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>330,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="스툴">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list11.png" alt="신상품1">
+                    <b>딥다크 스툴</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>112,000원</big>
+                  </a>
+                </div>
+              </li>
+              <li data-category="서랍장">
+                <div class="category-items">
+                  <a href="#none">
+                    <img src="images/category-list12.png" alt="신상품1">
+                    <b>유러피안 서랍장</b>
+                    <p>
+                      편안하고 인테리어 감각까지 갖출 수 있는 내 방에 가장 필요한 상품
+                    </p>
+                    <big>557,000원</big>
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="aside-nav">
+      <!--aside-nav include-->
+    </div>
+  </div>
+</body>
+</html>

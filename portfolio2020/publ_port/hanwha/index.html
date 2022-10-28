@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>한화에어로스페이스</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!------------------css------------------>
+	<link rel="stylesheet" href="./css/style.css">
+	<!------------------fontawesome------------------>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!------------------goggle-font------------------>
+	<link href="https://fonts.googleapis.com/css?family=Gothic+A1:400,500,600,700,800,900&display=swap&subset=korean" rel="stylesheet">
+
+	<!------------------jquery------------------>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/jquery.mousewheel.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			// 현재 화면높이와 너비를 구하여 한 화면 세로 가로 높이 적용
+			var wh = $(window).height();
+			var ww = $(window).width();
+			$("#wrap > section").height(wh);
+			$("#wrap > section").width(ww);
+
+			// 화면 세로 크기가 변경이 되었을 때 한 화면 높이값를 다시 적용
+			$(window).resize(function() {
+				var wh = $(window).height();
+				var ww = $(window).width();
+				$("#wrap > section").height(wh);
+				$("#wrap > section").width(ww);
+			});
+
+
+			//화면 너비가 1400이상 일 때 이벤트
+
+			// #wrap > section 영역에서 마우스 휠을 움직이면 자동으로 페이지 넘김
+			$("#wrap > section").mousewheel(function(event, delta) {
+				var ww = $(window).width(); // 마우스휠 이벤트시 ww변수의 값을 전역변수로 인식하지 못해서 다시 한번 가로 너비값을 구했습니다.
+				if (ww > 1400) { // 가로 너비를 묻는 조건을 마우스휠 이벤트가 있을때 검사하기 위해 이벤트 안쪽으로 옮겼어요
+					//마우스 휠을 올렸을때	
+					if (delta > 0) {
+						var prev = $(this).prev().offset().top;
+						$("html").stop().animate({
+							"scrollTop": prev
+						}, 1000);
+						//마우스 휠을 내렸을때	 
+					} else if (delta < 0) {
+						var next = $(this).next().offset().top;
+						$("html").stop().animate({
+							"scrollTop": next
+						}, 1000);
+					}
+				} else {
+					false
+				}
+			});
+			//slide 이벤트
+			var s = 0;
+			var auto_carousel = setInterval(function() {
+				s++;
+				if (s < 3) {
+					$(".slide").removeClass("on");
+					$(".slide").eq(s).addClass("on");
+					$(".slide-btn p").removeClass("on");
+					$(".slide-btn p").eq(s).addClass("on");
+				} else {
+					s = 0;
+					$(".slide").removeClass("on");
+					$(".slide").eq(s).addClass("on");
+					$(".slide-btn p").removeClass("on");
+					$(".slide-btn p").eq(s).addClass("on");
+				}
+			}, 6000);
+
+			//슬라이드 버튼 클릭시 이미지 전환
+			$(".slide-btn p").click(function() {
+				var num = $(this).index();
+				$(".slide").removeClass("on");
+				$(".slide").eq(num).addClass("on");
+				$(".slide-btn p").removeClass("on");
+				$(".slide-btn p").eq(num).addClass("on");
+				i = num;
+			});
+			//scroll 이벤트
+			$(window).scroll(function() {
+				var scroll_top = $(window).scrollTop();
+				var wh = $(window).height();
+				var ww = $(window).width();
+				if (ww > 1400) {
+					//스크롤시 숨어있던 페이지 네비게이션 나타나는 이벤트
+					if (scroll_top > wh * 0.5) {
+						$("#pager-btn").stop().animate({
+							right: '4%'
+						}, 500);
+					} else {
+						$("#pager-btn").stop().animate({
+							right: '-30%'
+						}, 200);
+					}
+					//스크롤시 페이지 네비게이션 표시 이벤트
+					var scroll_p = getScrollPosition();
+					/*$("#text").text(scroll_p);*/
+					if (scroll_p >= 19 && scroll_p <= 25) {
+						$("#pager-btn a").removeClass("active");
+						$("#pager-btn a").eq(0).addClass("active");
+					} else if (scroll_p >= 46 && scroll_p <= 50) {
+						$("#pager-btn a").removeClass("active");
+						$("#pager-btn a").eq(1).addClass("active");
+					} else if (scroll_p >= 70 && scroll_p <= 75) {
+						$("#pager-btn a").removeClass("active");
+						$("#pager-btn a").eq(2).addClass("active");
+					} else if (scroll_p >= 96 && scroll_p <= 100) {
+						$("#pager-btn a").removeClass("active");
+						$("#pager-btn a").eq(3).addClass("active");
+					}
+				} else {
+					false;
+				}
+			});
+
+			//모바일버전 네비게이션 바 표시 기능
+			$(".m-nav-btn").click(function() {
+				$(".m-navi-box").addClass("active");
+			});
+			$(".m-navi-close, .m-sub-menu > li > a").click(function() {
+				$(".m-navi-box").removeClass("active");
+				$(".m-navi > ul > li > a").removeClass("active");
+				$(".m-navi > ul > li > a").siblings(".m-sub-menu").slideUp();
+			});
+
+			$(".m-navi > ul > li > a").click(function() {
+				$(".m-navi > ul > li > a").removeClass("active");
+				$(this).toggleClass("active");
+				$(".m-navi > ul > li > a").siblings(".m-sub-menu").slideUp();
+				$(this).siblings(".m-sub-menu").slideToggle();
+			});
+
+
+		});
+
+		function getScrollPosition() {
+			return Math.floor(($(window).scrollTop() / ($(document).height() - $(window).height())) * 100);
+		}
+	</script>
+
+</head>
+
+<body>
+	<div id="wrap">
+		<!------------header------------>
+		<header>
+			<div id="header-inner">
+				<h1 class="logo"><a href="./index.html"><span>한화</span>에어로스페이스</a></h1>
+				<nav>
+					<ul>
+						<li>
+							<a href="#none">회사소개</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#none">기업정보</a>
+								</li>
+								<li>
+									<a href="#none">사업분야</a>
+								</li>
+								<li>
+									<a href="#none">사회공헌</a>
+								</li>
+								<li>
+									<a href="#none">기업경영</a>
+								</li>
+								<li>
+									<a href="#none">글로벌네트워크</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#none">제품소개</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#none">사업소개</a>
+								</li>
+								<li>
+									<a href="#none">항공엔진</a>
+								</li>
+								<li>
+									<a href="#none">항공기계</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#none">투자정보</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#none">경영정보</a>
+								</li>
+								<li>
+									<a href="#none">주가정보</a>
+								</li>
+								<li>
+									<a href="#none">재무정보</a>
+								</li>
+								<li>
+									<a href="#none">기업지배구조</a>
+								</li>
+								<li>
+									<a href="#none">IR자료실</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#none">인재채용</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#none">인재상</a>
+								</li>
+								<li>
+									<a href="#none">H/A의 사람들</a>
+								</li>
+								<li>
+									<a href="#none">채용안내</a>
+								</li>
+								<li>
+									<a href="#none">복리후생</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#none">사이버홍보실</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#none">통합뉴스센터</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<a class="m-nav-btn" href="#none"><i class="fa fa-bars m-nav-btn"></i></a>
+			</div>
+		</header>
+		<!------------//header------------>
+
+		<!------------slider------------>
+		<section id="slider">
+			<div class="slide slide01 on">
+				<img src="./images/slider01.png" alt="slide01" title="slider01">
+				<p class="slide-title01">
+					<big>초정밀 항공 엔진 기술</big>
+					<small>[ Ultra-Precision Air Engine Technology]</small>
+				</p>
+				<span>대한민국 유일의 항공기 엔진 제작 기업 한화에어로스페이스</span>
+			</div>
+			<div class="slide slide02">
+				<img src="./images/slider02.png" alt="slide02" title="slider02">
+				<article class="slide-title02">
+					<span>한화에어로스페이스의 <b>새로운 도전</b></span>
+					<big>
+						<span>OVERAIR </span><br>
+						<span>BUTTEFIY</span>
+					</big>
+					<span>
+						하늘과 땅을 손쉽게 잇는 에어택시
+					</span>
+				</article>
+			</div>
+			<div class="slide slide03">
+				<img src="./images/slider03.png" alt="slider03" title="slider03">
+				<article class="slide-title03">
+					<p>기술로 세상을 바꾼다는 믿음</p>
+					<p>글로벌 초일류기업을 향한 한화에어로스페이스의 노력</p>
+					<h3>한화에어로스페이스의 도전은 계속되고 있습니다. </h3>
+				</article>
+			</div>
+			<article class="slide-btn">
+				<p class="on"></p>
+				<p></p>
+				<p></p>
+			</article>
+			<div class="mouse">
+				<div class="mousewheel"></div>
+				<p>scroll</p>
+			</div>
+		</section>
+		<!------------//slider------------>
+
+		<!------------about------------>
+		<section id="about">
+			<div id="inner">
+				<h2 class="title ab-title">
+					ABOUT
+					<span>기업의 정보를 확인하실 수 있습니다.</span>
+				</h2>
+				<div class="ab-wrap">
+					<div>
+						<a href="#none">
+							<span class="ab-info">
+								<big>국내 유일을 넘어 세계를 향한 도전</big>
+								<small>꿈이 실현되는 그 곳에 한화에어로스페이스가 함께합니다.</small>
+							</span>
+							<span class="ab-btn">회사소개 바로가기</span>
+						</a>
+					</div>
+					<div>
+						<a href="#none">
+							<span class="ab-info">
+								<big>Aircraft Engine</big>
+								<small>항공기 엔진 개발, 생산, 정비에 특화된 첨단 기계 산업의 리더</small>
+							</span>
+							<span class="ab-btn">사업분야 바로가기</span>
+						</a>
+					</div>
+					<div>
+						<a href="#none">
+							<span class="ab-info">
+								<big>굳건한 기업의 가치</big>
+								<small>주요 경영정보 및 투자정보를 확인하실 수 있습니다.</small>
+							</span>
+							<span class="ab-btn">투자정보 바로가기</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!------------//about------------>
+
+		<!------------product------------>
+		<section id="product">
+			<div id="inner">
+				<div class="pd-wrap">
+					<div>
+						<article>
+							<div class="pd-head">
+								<h2 class="title pd-title">
+									PRODUCT
+									<span>
+										한화에어로스페이스의<br> 제품을 소개합니다.
+									</span>
+								</h2>
+							</div>
+							<div class="pd-01">
+								<a href="#none"></a>
+							</div>
+						</article>
+						<article class="pd-02">
+							<a href="#none"></a>
+						</article>
+					</div>
+					<div class="pd-03">
+						<a href="#none"></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!------------//product------------>
+
+		<!------------global------------>
+		<section id="global">
+			<div id="inner">
+				<div class="glo-wrap">
+					<b>GLOBAL NETWORK</b>
+					<span>
+						국내를 넘어 아시아로, 아시아를 넘어 세계로.<br>
+						세계를 향한 끊임없는 도전<br>
+						<big>한화에어로스페이스</big>
+					</span>
+					<a class="glo-btn active" href="#none">국내외 사업장 확인</a>
+				</div>
+			</div>
+		</section>
+		<!------------//global------------>
+
+		<!------------story------------>
+		<section id="story">
+			<div id="inner">
+				<h2 class="title st-title">
+					STORY
+					<span>기업의 다양한 이야기를 확인할 수 있습니다.</span>
+				</h2>
+				<div class="st-wrap">
+					<div class="st-left">
+						<a href="#none">
+							<span>사회공헌</span>
+						</a>
+					</div>
+					<div class="st-right">
+						<article class="st-top">
+							<div>
+								<p class="st-subtitle">
+									<b>보도자료</b>
+									<small>
+										기업의 최근 소식을 <br>
+										확인하실 수 있습니다.
+									</small>
+									<a href="#none">더보기</a>
+								</p>
+							</div>
+							<div>
+								<a href="#none">
+									<span>
+										‘한화’, 우버택시와 함께 에어택시<br> 개발 사업 추진
+									</span>
+								</a>
+							</div>
+						</article>
+						<article class="st-bottom">
+							<div>
+								<a href="#none">
+									<span>
+										기술사업부<br>
+										<big>이동현 대리</big>
+									</span>
+								</a>
+							</div>
+							<div>
+								<p class="st-subtitle">
+									<b>이달의 한화인</b>
+									<small>
+										매달 새로운 한화인의<br>
+										인터뷰로 찾아옵니다.
+									</small>
+									<a href="#none">더보기</a>
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!------------//story------------>
+
+		<!------------mobile-pager-btn------------>
+		<div id="pager-btn">
+			<a class="pg-ab " href="#about"></a>
+			<a class="pg-pd" href="#product"></a>
+			<a class="pg-glo" href="#global"></a>
+			<a class="pg-st" href="#story"></a>
+		</div>
+		<!------------//mobile-pager-btn------------>
+
+		<!------------mobile-navigation------------>
+		<div class="m-navi-box">
+			<div class="m-navi">
+				<a href="#none" class="m-navi-close"><i class="fa fa-times m-navi-close"></i></a>
+				<ul>
+					<li>
+						<a href="#none">회사소개</a>
+						<ul class="m-sub-menu">
+							<li>
+								<a href="#none">기업정보</a>
+							</li>
+							<li>
+								<a href="#none">사업분야</a>
+							</li>
+							<li>
+								<a href="#none">사회공헌</a>
+							</li>
+							<li>
+								<a href="#none">기업경영</a>
+							</li>
+							<li>
+								<a href="#none">글로벌네트워크</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#none">제품소개</a>
+						<ul class="m-sub-menu">
+							<li>
+								<a href="#none">사업소개</a>
+							</li>
+							<li>
+								<a href="#none">항공엔진</a>
+							</li>
+							<li>
+								<a href="#none">항공기계</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#none">투자정보</a>
+						<ul class="m-sub-menu">
+							<li>
+								<a href="#none">경영정보</a>
+							</li>
+							<li>
+								<a href="#none">주가정보</a>
+							</li>
+							<li>
+								<a href="#none">재무정보</a>
+							</li>
+							<li>
+								<a href="#none">기업지배구조</a>
+							</li>
+							<li>
+								<a href="#none">IR자료실</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#none">인재채용</a>
+						<ul class="m-sub-menu">
+							<li>
+								<a href="#none">인재상</a>
+							</li>
+							<li>
+								<a href="#none">한화에어로스페이스의 사람들</a>
+							</li>
+							<li>
+								<a href="#none">채용안내</a>
+							</li>
+							<li>
+								<a href="#none">복리후생</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#none">사이버홍보실</a>
+						<ul class="m-sub-menu">
+							<li>
+								<a href="#none">통합뉴스센터</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!------------//mobile-navigation------------>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Botanicala Drawing Art Class</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="visual">
+      <header class="clearfix">
+        <div class="logo">
+          <a href="#none">
+            <img src="images/logo.png">
+          </a>
+        </div>
+        <nav>
+          <a href="index.html">home</a>
+          <a href="about.html">about</a>
+          <a href="#contact">contact</a>
+          <a href="#class">class</a>
+          <a href="#review">review</a>
+        </nav>
+        <div class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <div class="slide-inner">
+        <input type="radio" name="maintab" id="tab01" checked>
+        <input type="radio" name="maintab" id="tab02">
+        <input type="radio" name="maintab" id="tab03">
+
+        <div class="content slide1">
+          <h1>
+            <span>Botanicala</span>
+            <span>Drawing Art class</span>
+          </h1>
+        </div>
+        <div class="content slide2">
+          <p class="draw">
+            Drawing by Tealda
+            <br>student
+          </p>
+        </div>
+        <div class="content slide3">
+          <h1>Botanicala<br>Drawing Art class</h1>
+          <p class="draw">
+            Drawing by Anne
+            <br>student
+          </p>
+        </div>
+
+        <div class="btn">
+          <label for="tab01"></label>
+          <label for="tab02"></label>
+          <label for="tab03"></label>
+        </div>
+      </div>
+    </div>
+    <section class="look" id="about">
+      <div class="inner">
+        <h1>Looking for</h1>
+        <div class="looking-list">
+          <div>
+            <b>Class schedule</b>
+            <p>
+              Please check the class schedule
+              before you register.
+            </p>
+            <a href="#none"><i class="fa fa-long-arrow-right"></i></a>
+          </div>
+          <div>
+            <b>Artwork gallery</b>
+            <p>
+              You can see the work of
+              the students.
+            </p>
+            <a href="#none"><i class="fa fa-long-arrow-right"></i></a>
+          </div>
+          <div id="contact">
+            <b>Work request</b>
+            <p>
+              You can request
+              a work request here,
+              or contact us.
+            </p>
+            <a href="#none"><i class="fa fa-long-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video-area clearfix" id="class">
+      <iframe width="940" height="605" src="https://www.youtube.com/embed/MLjsm35AaRw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div>
+        <h1>You can draw<br>
+          anywhere !
+        </h1>
+        <p>
+          If only our online teaching systems.
+        </p>
+        <a href="#none">watch</a>
+      </div>
+    </section>
+    <section class="how-about">
+      <div class="inner">
+        <div class="class-apply">
+          <h1 class="active">
+            How about making<br>
+            your life <br>
+            more colorful <br>
+            with us?<br>
+          </h1>
+          <a href="#none">Class Application</a>
+        </div>
+      </div>
+    </section>
+    <div class="bottom">
+      <section class="review" id="review">
+        <div class="inner">
+          <div class="review-slide">
+            <input type="radio" name="review" id="review01" checked>
+            <input type="radio" name="review" id="review02">
+            <input type="radio" name="review" id="review03">
+
+            <div class="review-box">
+              <div class="box-inner">
+                <article>
+                  <div>
+                    <img src="images/review-thum01.png">
+                    <h2>“ You will get excellent drawing techniques. ”</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ratione temporibus, enim accusantium atque adipisci  
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <div>
+                    <img src="images/review-thum02.png">
+                    <h2>“ You will get excellent drawing techniques. ”</h2>
+                    <p>
+                      It is a long established fact that a reader will be distracted by the readable 
+normal distribution of letters, as opposed to using ....   
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <div>
+                    <img src="images/review-thum03.png">
+                    <h2>“ Happy class ! ”</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ratione temporibus, enim accusantium atque adipisci  
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="review-btn">
+              <label for="review01"></label>
+              <label for="review02"></label>
+              <label for="review03"></label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <h1>Subscribe To Our Newsletter</h1>
+        <form>
+          <input type="text" placeholder="Enter Your Email !">
+          <a href="#none">Subscribe</a>
+        </form>
+        <copyright>
+          Copyright @2019, Botanicala
+        </copyright>
+      </footer>
+    </div>
+    <a href="#" class="top"><i class="fa fa-chevron-up"></i></a>
+  </div>
+  
+  <script>
+    $(window).on("scroll", function(){
+      if($(window).scrollTop() > 100) {
+        $('header').addClass('active');
+        $('nav a').addClass('active');
+        $('.top').fadeIn();
+      } else {
+        $('header').removeClass('active');
+        $('nav a').removeClass('active');
+        $('.top').fadeOut();
+      }
+      if($(window).scrollTop() > 1600) {
+         $('.video-area div').addClass('active');
+      } else {
+        $('.video-area div').removeClass('active');
+      }
+      if($(window).scrollTop() > 2300) {
+         $('.class-apply h1, .class-apply a').addClass('active');
+      } else {
+        $('.class-apply h1, .class-apply a').removeClass('active');
+      }
+    });
+    $('.menu-btn').click(function(){
+      $('.menu-btn').toggleClass('active');
+      $('nav').toggleClass('active');
+    });
+    $('nav a, section, footer, .logo').click(function(){
+      $('.menu-btn').removeClass('active');
+      $('nav').removeClass('active');
+    });
+  </script>
+</body>
+</html>
