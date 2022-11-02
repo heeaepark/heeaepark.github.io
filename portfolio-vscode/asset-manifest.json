@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/portfolio-vscode/static/css/main.81a5bdf3.css",
+    "main.js": "/portfolio-vscode/static/js/main.dfcd123d.js",
+    "index.html": "/portfolio-vscode/index.html",
+    "main.81a5bdf3.css.map": "/portfolio-vscode/static/css/main.81a5bdf3.css.map",
+    "main.dfcd123d.js.map": "/portfolio-vscode/static/js/main.dfcd123d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81a5bdf3.css",
+    "static/js/main.dfcd123d.js"
+  ]
+}
