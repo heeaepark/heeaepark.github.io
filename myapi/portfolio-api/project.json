@@ -40,7 +40,7 @@
     "name": "VScode Portfolio",
     "image": "이미지~",
     "description": "VScode 스타일의 포트폴리오입니다. (2022 ver)",
-    "tags": ["react", "css-module","axios", "ajax", "open-API"],
+    "tags": ["react", "css-module","axios", "open-API"],
     "memoir": "",
     "source_code": "https://github.com/heeaepark/portfolio-vscode",
     "demo": ""
