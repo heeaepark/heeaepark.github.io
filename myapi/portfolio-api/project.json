@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "Portfolio 2020",
+    "image": "이미지~",
+    "description": "2020년도에 제작한 웹퍼블리셔 포트폴리오 사이트입니다.",
+    "tags": ["html", "css", "ui-kit", "jquery"],
+    "source_code": "https://github.com/heeaepark/heeaepark.github.io/tree/main/portfolio2020",
+    "demo": "https://heeaepark.github.io/portfolio2020/"
+  },
+  {
+    "id": 2,
+    "name": "Makergallery",
+    "image": "이미지~",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트입니다.",
+    "tags": ["html", "scss", "jquery", "swiper-js"],
+    "memoir": "https://makergallery.co.kr/mw/main/index.do",
+    "demo": "https://makergallery.co.kr/mw/main/index.do"
+  },
+  {
+    "id": 3,
+    "name": "Makergallery Back-office",
+    "image": "이미지~",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "tags": ["html", "scss", "jquery", "chart-js"],
+    "memoir": "https://makergallery.co.kr/mw/main/index.do"
+  },
+  {
+    "id": 4,
+    "name": "Simple-note",
+    "image": "이미지~",
+    "description": "리액트 토이프로젝트 Simple-note App입니다.",
+    "tags": ["react", "redux", "styled-componets", "localhost", "uuid", "moment-js"],
+    "memoir": "https://heeeming.tistory.com/11",
+    "source_code": "https://github.com/heeaepark/simple-note-app",
+    "demo": "https://heeaepark.github.io/simple-note/"
+  },
+  {
+    "id": 5,
+    "name": "VScode Portfolio",
+    "image": "이미지~",
+    "description": "VScode 스타일의 포트폴리오입니다. (2022 ver)",
+    "tags": ["react", "css-module","axios", "ajax", "open-API"],
+    "memoir": "",
+    "source_code": "https://github.com/heeaepark/portfolio-vscode",
+    "demo": ""
+  }
+]
