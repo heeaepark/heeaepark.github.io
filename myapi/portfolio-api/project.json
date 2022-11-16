@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "copy": "personal",
     "name": "Portfolio 2020",
     "image": "이미지~",
     "description": "2020년도에 제작한 웹퍼블리셔 포트폴리오 사이트입니다.",
@@ -10,6 +11,7 @@
   },
   {
     "id": 2,
+    "copy": "company",
     "name": "Makergallery",
     "image": "이미지~",
     "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트입니다.",
@@ -19,6 +21,7 @@
   },
   {
     "id": 3,
+    "copy": "company",
     "name": "Makergallery Back-office",
     "image": "이미지~",
     "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
@@ -27,6 +30,7 @@
   },
   {
     "id": 4,
+    "copy": "personal",
     "name": "Simple-note",
     "image": "이미지~",
     "description": "리액트 토이프로젝트 Simple-note App입니다.",
@@ -37,6 +41,7 @@
   },
   {
     "id": 5,
+    "copy": "personal",
     "name": "VScode Portfolio",
     "image": "이미지~",
     "description": "VScode 스타일의 포트폴리오입니다. (2022 ver)",
