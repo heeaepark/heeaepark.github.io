@@ -3,7 +3,7 @@
     "id": 1,
     "copy": "personal",
     "name": "Portfolio 2020",
-    "image": "이미지~",
+    "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_01.png",
     "description": "2020년도에 제작한 웹퍼블리셔 포트폴리오 사이트입니다.",
     "tags": ["html", "css", "ui-kit", "jquery"],
     "source_code": "https://github.com/heeaepark/heeaepark.github.io/tree/main/portfolio2020",
@@ -13,26 +13,26 @@
     "id": 2,
     "copy": "company",
     "name": "Makergallery",
-    "image": "이미지~",
+    "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_02.png",
     "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트입니다.",
     "tags": ["html", "scss", "jquery", "swiper-js"],
-    "memoir": "https://makergallery.co.kr/mw/main/index.do",
+    "memo": "https://heeeming.tistory.com",
     "demo": "https://makergallery.co.kr/mw/main/index.do"
   },
   {
     "id": 3,
     "copy": "company",
     "name": "Makergallery Back-office",
-    "image": "이미지~",
+    "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_03.png",
     "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
     "tags": ["html", "scss", "jquery", "chart-js"],
-    "memoir": "https://makergallery.co.kr/mw/main/index.do"
+    "memo": "https://heeeming.tistory.com"
   },
   {
     "id": 4,
     "copy": "personal",
     "name": "Simple-note",
-    "image": "이미지~",
+    "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_04.png",
     "description": "리액트 토이프로젝트 Simple-note App입니다.",
     "tags": ["react", "redux", "styled-componets", "localhost", "uuid", "moment-js"],
     "memoir": "https://heeeming.tistory.com/11",
@@ -43,11 +43,11 @@
     "id": 5,
     "copy": "personal",
     "name": "VScode Portfolio",
-    "image": "이미지~",
+    "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_05.png",
     "description": "VScode 스타일의 포트폴리오입니다. (2022 ver)",
     "tags": ["react", "css-module","axios", "open-API"],
-    "memoir": "",
+    "memo": "https://heeeming.tistory.com",
     "source_code": "https://github.com/heeaepark/portfolio-vscode",
-    "demo": ""
+    "demo": "https://heeaepark.github.io"
   }
 ]
