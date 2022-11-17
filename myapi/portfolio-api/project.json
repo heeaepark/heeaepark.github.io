@@ -16,7 +16,7 @@
     "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_02.png",
     "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트입니다.",
     "tags": ["html", "scss", "jquery", "swiper-js"],
-    "memo": "https://heeeming.tistory.com",
+    "career": "https://heeeming.tistory.com",
     "demo": "https://makergallery.co.kr/mw/main/index.do"
   },
   {
@@ -26,7 +26,7 @@
     "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_03.png",
     "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
     "tags": ["html", "scss", "jquery", "chart-js"],
-    "memo": "https://heeeming.tistory.com"
+    "career": "https://heeeming.tistory.com"
   },
   {
     "id": 4,
@@ -35,7 +35,7 @@
     "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_04.png",
     "description": "리액트 토이프로젝트 Simple-note App입니다.",
     "tags": ["react", "redux", "styled-componets", "localhost", "uuid", "moment-js"],
-    "memoir": "https://heeeming.tistory.com/11",
+    "memo": "https://heeeming.tistory.com/11",
     "source_code": "https://github.com/heeaepark/simple-note-app",
     "demo": "https://heeaepark.github.io/simple-note/"
   },
