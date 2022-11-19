@@ -14,7 +14,7 @@
     "name": "Simple-note",
     "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_04.png",
     "description": "리액트 토이프로젝트 Simple-note App입니다.",
-    "tags": ["react", "redux", "styled-componets", "localhost", "uuid", "moment-js"],
+    "tags": ["react", "redux", "styled-componets", "localstorage", "uuid", "moment-js"],
     "memo": "https://heeeming.tistory.com/11",
     "source_code": "https://github.com/heeaepark/simple-note-app",
     "demo": "https://heeaepark.github.io/simple-note/"
