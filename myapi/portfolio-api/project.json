@@ -4,7 +4,7 @@
     "name": "VScode Portfolio",
     "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_05.png",
     "description": "VScode 스타일의 포트폴리오입니다. (2022 ver)",
-    "tags": ["react", "css-module","axios", "open-API"],
+    "tags": ["react", "css-module","axios", "EmailJS-API", "RSSTOJSON-API"],
     "memo": "https://heeeming.tistory.com/entry/Portfolio-%EC%9B%B9%ED%8D%BC%EB%B8%94%EB%A6%AC%EC%85%94%EC%9D%98-%EB%A6%AC%EC%95%A1%ED%8A%B8-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-VScode-Style",
     "source_code": "https://github.com/heeaepark/portfolio-vscode",
     "demo": "https://heeaepark.github.io"
