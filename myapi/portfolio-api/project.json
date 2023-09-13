@@ -50,7 +50,7 @@
     "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_03.png",
     "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
     "tags": ["html", "scss", "jquery", "chart-js"],
-    "career": "https://heeaepark.notion.site/cc41d64193c04aa79e499c3d20a750f3"
+    "career": "https://heeaepark.notion.site/cc41d64193c04aa79e499c3d20a750f3?pvs=4"
   },
   {
     "copy": "company",
@@ -58,7 +58,7 @@
     "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_02.png",
     "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트입니다.",
     "tags": ["html", "scss", "jquery", "swiper-js"],
-    "career": "https://www.notion.so/heeaepark/c4a4145f9e3949659a00a5f3857575f8",
+    "career": "https://heeaepark.notion.site/c4a4145f9e3949659a00a5f3857575f8?pvs=4",
     "demo": "https://makergallery.co.kr/mw/main/index.do"
   },
   {
