@@ -1,6 +1,21 @@
 [
   {
     "copy": "company",
+    "name": "웅진씽크빅",
+    "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_07.png",
+    "description": "웅진씽크빅 AI 디지털 교과서 개발 프로젝트 입니다.",
+    "tags": [
+      "react 18",
+      "next 14.3",
+      "typescript(zod)",
+      "Zustand",
+      "react-query",
+      "storybook"
+    ],
+    "career": "https://heeaepark.notion.site/f2f8c1a4fd104dda97c0fd4dba619d7a?pvs=4"
+  },
+  {
+    "copy": "company",
     "name": "Publish",
     "image": "https://heeaepark.github.io/myapi/vscode-portfolio-img/port_06.png",
     "description": "퍼블리시 근무 당시 진행한 프로젝트들 입니다.",
